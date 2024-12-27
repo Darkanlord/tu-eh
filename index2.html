@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #sim {
+            background-color: #4caf50;
+            color: white;
+        }
+        #nao {
+            background-color: #ff4d4d;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mano, tu eh? 😏</h1>
+        <button id="sim" class="btn">Sim</button>
+        <button id="nao" class="btn">Não</button>
+    </div>
+
+    <script>
+        const nao = document.getElementById('nao');
+        const sim = document.getElementById('sim');
+
+        // Movimenta o botão "Não"
+        nao.addEventListener('mouseover', function () {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            nao.style.left = `${x}px`;
+            nao.style.top = `${y}px`;
+        });
+
+        // Redireciona para o vídeo do YouTube ao clicar em "Sim"
+        sim.addEventListener('click', function () {
+            window.open('https://www.youtube.com/watch?v=M77SyibZ_xQ', '_blank');
+        });
+    </script>
+
+</body>
+</html>
